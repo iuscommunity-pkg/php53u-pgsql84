@@ -8,7 +8,7 @@
 Summary:        A PostgreSQL 8.4 database module for PHP        
 Name:           %{php_base}-pgsql84
 Version:        %{php_ver} 
-Release:        1.ius%{?dist}
+Release:        2.ius%{?dist}
 Group:          Development/Languages
 License:        PHP 
 URL:            http://php.net
@@ -96,6 +96,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/php/modules/pdo_pgsql.so
 
 %changelog
+* Wed Mar 06 2013 Jeffrey Ness <jeffrey.ness@rackspace.com> - 5.3.22-2.ius
+- Rebuilding against 5.3.22-3
+
 * Fri Feb 22 2013 Ben Harper <ben.harper@rackspace.com> - 5.3.22-1.ius
 - Rebuilding for 5.3.22
 

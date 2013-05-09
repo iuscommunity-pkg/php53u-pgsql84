@@ -1,7 +1,7 @@
 
 %global php_base php53u
 %global php_apiver  %((echo 0; php -i 2>/dev/null | sed -n 's/^PHP API => //p') | tail -1)
-%global php_ver 5.3.24
+%global php_ver 5.3.25
 %global php_basever 5.3
 
 
@@ -96,6 +96,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/php/modules/pdo_pgsql.so
 
 %changelog
+* Thu May 09 2013 Ben Harper <ben.harper@rackspace.com> - 5.3.25-1.ius
+- Rebuilding for 5.3.25
+
 * Fri Apr 12 2013 Ben Harper <ben.harper@rackspace.com> - 5.3.24-1.ius
 - Rebuilding for 5.3.24
 

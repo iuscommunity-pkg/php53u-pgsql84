@@ -8,7 +8,7 @@
 Summary:        A PostgreSQL 8.4 database module for PHP        
 Name:           %{php_base}-pgsql84
 Version:        %{php_ver} 
-Release:        1.ius%{?dist}
+Release:        2.ius%{?dist}
 Group:          Development/Languages
 License:        PHP 
 URL:            http://php.net
@@ -96,6 +96,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/php/modules/pdo_pgsql.so
 
 %changelog
+* Wed Mar 12 2014 Ben Harper <ben.harper@rackspace.com> - 5.3.28-2.ius
+- rebuilt with updated gnutls as it is installed as a part of the build process
+  Red Hat issued the following Security Advisories:
+  https://rhn.redhat.com/errata/RHSA-2014-0247.html
+  https://rhn.redhat.com/errata/RHSA-2014-0246.html
+
 * Fri Dec 13 2013 Ben Harper <ben.harper@rackspace.com> - 5.3.28-1.ius
 - Rebuilding for 5.3.28
 

@@ -1,14 +1,14 @@
 
 %global php_base php53u
 %global php_apiver  %((echo 0; php -i 2>/dev/null | sed -n 's/^PHP API => //p') | tail -1)
-%global php_ver 5.3.28
+%global php_ver 5.3.29
 %global php_basever 5.3
 
 
 Summary:        A PostgreSQL 8.4 database module for PHP        
 Name:           %{php_base}-pgsql84
 Version:        %{php_ver} 
-Release:        2.ius%{?dist}
+Release:        1.ius%{?dist}
 Group:          Development/Languages
 License:        PHP 
 URL:            http://php.net
@@ -96,6 +96,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/php/modules/pdo_pgsql.so
 
 %changelog
+* Thu Aug 14 2014 Ben Harper <ben.harper@rackspace.com> - 5.3.9-1.ius
+- Rebuilding for 5.3.28
+
 * Wed Mar 12 2014 Ben Harper <ben.harper@rackspace.com> - 5.3.28-2.ius
 - rebuilt with updated gnutls as it is installed as a part of the build process
   Red Hat issued the following Security Advisories:
